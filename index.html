@@ -1,0 +1,1818 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Portfólio profissional de Lucas Rezende — TI, Infraestrutura, Segurança da Informação e Segurança Ofensiva."
+    >
+
+    <meta
+        name="author"
+        content="Lucas Rezende"
+    >
+
+    <meta
+        name="theme-color"
+        content="#0b0f14"
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:title"
+        content="Lucas Rezende | TI & Cybersecurity"
+    >
+
+    <meta
+        property="og:description"
+        content="Portfólio profissional de Lucas Rezende — TI, Infraestrutura, Segurança da Informação e Segurança Ofensiva."
+    >
+
+    <meta
+        property="og:locale"
+        content="pt_BR"
+    >
+
+    <title>Lucas Rezende | TI & Cybersecurity</title>
+
+    <style>
+
+        /* =========================================================
+           RESET
+        ========================================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b0f14;
+            color: #e6edf3;
+            line-height: 1.6;
+        }
+
+        body,
+        button,
+        a {
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        ul {
+            list-style-position: outside;
+        }
+
+
+        /* =========================================================
+           VARIÁVEIS
+        ========================================================= */
+
+        :root {
+            --background: #0b0f14;
+            --surface: #111820;
+            --surface-hover: #151e27;
+            --border: #202a34;
+            --border-light: #26313b;
+            --text: #e6edf3;
+            --text-secondary: #aab4be;
+            --text-muted: #8b98a5;
+            --text-dark: #66727d;
+            --green: #00d084;
+            --green-dark: #08110d;
+            --container: 1150px;
+        }
+
+
+        /* =========================================================
+           CONTAINER
+        ========================================================= */
+
+        .container {
+            width: 90%;
+            max-width: var(--container);
+            margin: 0 auto;
+        }
+
+
+        /* =========================================================
+           HEADER / MENU
+        ========================================================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(11, 15, 20, 0.95);
+            border-bottom: 1px solid #1f2933;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        nav {
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .logo {
+            flex-shrink: 0;
+            font-size: 1.2rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--green);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            transition:
+                color 0.3s ease,
+                transform 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a:focus {
+            color: var(--green);
+        }
+
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 70px;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero small {
+            color: var(--green);
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            line-height: 1;
+            margin: 20px 0;
+        }
+
+        .hero h1 span {
+            color: var(--green);
+        }
+
+        .hero h2 {
+            color: var(--text-secondary);
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            font-weight: normal;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+
+        /* =========================================================
+           BOTÕES
+        ========================================================= */
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 35px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 48px;
+            padding: 12px 22px;
+            border: 1px solid var(--green);
+            border-radius: 6px;
+            color: var(--green);
+            transition:
+                background 0.3s ease,
+                color 0.3s ease,
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .button:hover,
+        .button:focus-visible {
+            background: var(--green);
+            color: var(--green-dark);
+            transform: translateY(-2px);
+        }
+
+        .button.primary {
+            background: var(--green);
+            color: var(--green-dark);
+        }
+
+        .button.primary:hover,
+        .button.primary:focus-visible {
+            background: transparent;
+            color: var(--green);
+        }
+
+
+        /* =========================================================
+           SEÇÕES
+        ========================================================= */
+
+        section {
+            padding: 100px 0;
+            border-top: 1px solid #1f2933;
+        }
+
+        .section-title {
+            margin-bottom: 50px;
+        }
+
+        .section-title small {
+            color: var(--green);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-top: 10px;
+        }
+
+        .section-title p {
+            max-width: 700px;
+            color: var(--text-muted);
+            margin-top: 10px;
+        }
+
+
+        /* =========================================================
+           SOBRE
+        ========================================================= */
+
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .about p {
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+        }
+
+        .about-info {
+            border-left: 2px solid var(--green);
+            padding-left: 25px;
+        }
+
+        .about-info p {
+            margin-bottom: 8px;
+        }
+
+        .about-info strong {
+            color: var(--text);
+        }
+
+
+        /* =========================================================
+           COMPETÊNCIAS
+        ========================================================= */
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 25px;
+            transition:
+                border-color 0.3s ease,
+                transform 0.3s ease,
+                background 0.3s ease;
+        }
+
+        .skill-card:hover {
+            border-color: var(--green);
+            background: var(--surface-hover);
+            transform: translateY(-3px);
+        }
+
+        .skill-card h3 {
+            color: var(--green);
+            margin-bottom: 15px;
+        }
+
+        .skill-card p {
+            color: var(--text-secondary);
+        }
+
+
+        /* =========================================================
+           EXPERIÊNCIA
+        ========================================================= */
+
+        .timeline {
+            position: relative;
+            border-left: 2px solid #26313b;
+            margin-left: 10px;
+        }
+
+        .experience {
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 50px;
+        }
+
+        .experience:last-child {
+            margin-bottom: 0;
+        }
+
+        .experience::before {
+            content: "";
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--green);
+            left: -7px;
+            top: 7px;
+        }
+
+        .experience h3 {
+            font-size: 1.3rem;
+        }
+
+        .experience .company {
+            color: var(--green);
+            font-weight: bold;
+            margin-top: 3px;
+        }
+
+        .experience .date {
+            color: #707d88;
+            font-size: 0.9rem;
+            margin: 5px 0 15px;
+        }
+
+        .experience ul {
+            padding-left: 20px;
+            color: var(--text-secondary);
+        }
+
+        .experience li {
+            margin-bottom: 6px;
+        }
+
+
+        /* =========================================================
+           PROJETOS
+        ========================================================= */
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            min-height: 280px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 30px;
+            transition:
+                border-color 0.3s ease,
+                transform 0.3s ease,
+                background 0.3s ease;
+        }
+
+        .project-card:hover {
+            border-color: var(--green);
+            background: var(--surface-hover);
+            transform: translateY(-5px);
+        }
+
+        .project-card h3 {
+            color: var(--green);
+            margin-bottom: 15px;
+        }
+
+        .project-card p {
+            color: var(--text-secondary);
+        }
+
+        /* Botão do relatório fica sempre no final do card */
+
+        .project-card .button {
+            margin-top: auto;
+            align-self: flex-start;
+        }
+
+
+        /* =========================================================
+           FORMAÇÃO
+        ========================================================= */
+
+        .education-card {
+            background: var(--surface);
+            border-left: 3px solid var(--green);
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+
+        .education-card h3 {
+            margin-bottom: 5px;
+        }
+
+        .education-card p {
+            color: var(--text-muted);
+        }
+
+
+        /* =========================================================
+           CURSOS
+        ========================================================= */
+
+        .courses {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .course-group {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 25px;
+            border-radius: 8px;
+        }
+
+        .course-group h3 {
+            color: var(--green);
+            margin-bottom: 15px;
+        }
+
+        .course-group ul {
+            padding-left: 20px;
+            color: var(--text-secondary);
+        }
+
+        .course-group li {
+            margin-bottom: 10px;
+        }
+
+
+        /* =========================================================
+           CERTIFICAÇÕES
+        ========================================================= */
+
+        .certifications {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            border: 1px solid var(--border-light);
+            background: var(--surface);
+            color: var(--text-secondary);
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition:
+                border-color 0.3s ease,
+                color 0.3s ease;
+        }
+
+        .tag:hover {
+            border-color: var(--green);
+            color: var(--green);
+        }
+
+
+        /* =========================================================
+           IDIOMAS
+        ========================================================= */
+
+        .languages {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .language {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 20px 30px;
+            border-radius: 8px;
+        }
+
+        .language strong {
+            color: var(--green);
+        }
+
+
+        /* =========================================================
+           CONTATO
+        ========================================================= */
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact .section-title {
+            margin-bottom: 45px;
+        }
+
+        .contact .section-title p {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        footer {
+            border-top: 1px solid #1f2933;
+            padding: 30px 0;
+            text-align: center;
+            color: var(--text-dark);
+            font-size: 0.9rem;
+        }
+
+
+        /* =========================================================
+           ACESSIBILIDADE
+        ========================================================= */
+
+        a:focus-visible {
+            outline: 2px solid var(--green);
+            outline-offset: 4px;
+        }
+
+
+        /* =========================================================
+           RESPONSIVIDADE
+        ========================================================= */
+
+        @media (max-width: 900px) {
+
+            .nav-links {
+                gap: 15px;
+            }
+
+            .nav-links a {
+                font-size: 0.82rem;
+            }
+
+            .about,
+            .skills,
+            .projects,
+            .courses {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        @media (max-width: 700px) {
+
+            nav {
+                min-height: 60px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                min-height: auto;
+                padding-top: 130px;
+                padding-bottom: 100px;
+            }
+
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+
+            .hero h2 {
+                font-size: 1.25rem;
+            }
+
+            section {
+                padding: 70px 0;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .about-info {
+                padding-left: 20px;
+            }
+
+            .timeline {
+                margin-left: 5px;
+            }
+
+            .experience {
+                padding-left: 25px;
+            }
+        }
+
+
+        @media (max-width: 480px) {
+
+            .container {
+                width: 88%;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .hero-buttons,
+            .contact-links {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .button {
+                width: 100%;
+            }
+
+            .project-card,
+            .skill-card,
+            .course-group {
+                padding: 22px;
+            }
+
+            .language {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- =========================================================
+         MENU
+    ========================================================== -->
+
+    <header>
+
+        <div class="container">
+
+            <nav aria-label="Navegação principal">
+
+                <a
+                    href="#inicio"
+                    class="logo"
+                    aria-label="Lucas Rezende - início"
+                >
+                    L<span>R</span>
+                </a>
+
+                <ul class="nav-links">
+
+                    <li>
+                        <a href="#sobre">Sobre</a>
+                    </li>
+
+                    <li>
+                        <a href="#competencias">Competências</a>
+                    </li>
+
+                    <li>
+                        <a href="#experiencia">Experiência</a>
+                    </li>
+
+                    <li>
+                        <a href="#projetos">Projetos</a>
+                    </li>
+
+                    <li>
+                        <a href="#formacao">Formação</a>
+                    </li>
+
+                    <li>
+                        <a href="#cursos">Cursos</a>
+                    </li>
+
+                    <li>
+                        <a href="#contato">Contato</a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================================
+         CONTEÚDO PRINCIPAL
+    ========================================================== -->
+
+    <main>
+
+
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
+
+        <section
+            class="hero"
+            id="inicio"
+        >
+
+            <div class="container">
+
+                <div class="hero-content">
+
+                    <small>
+                        TI • Infrastructure • Cybersecurity
+                    </small>
+
+                    <h1>
+                        Lucas <span>Rezende</span>
+                    </h1>
+
+                    <h2>
+                        TI | Infraestrutura, Cybersecurity & IA
+                    </h2>
+
+                    <p>
+                        Profissional de TI com experiência prática em suporte,
+                        infraestrutura, redes, administração de sistemas e
+                        segurança. Atualmente direcionando minha carreira para
+                        Segurança da Informação, com foco em Segurança Ofensiva,
+                        análise de vulnerabilidades e testes de intrusão.
+                        Paralelamente, venho aprofundando meus estudos em
+                        Inteligência Artificial, com interesse em LLMs, IA local,
+                        automação e sistemas inteligentes.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a
+                            href="#projetos"
+                            class="button primary"
+                        >
+                            Ver projetos
+                        </a>
+
+                        <a
+                            href="#contato"
+                            class="button"
+                        >
+                            Entrar em contato
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             SOBRE
+        ====================================================== -->
+
+        <section id="sobre">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <small>
+                        01 / Sobre
+                    </small>
+
+                    <h2>
+                        Perfil profissional
+                    </h2>
+
+                </div>
+
+
+                <div class="about">
+
+                    <div>
+
+                        <p>
+                            Possuo experiência prática com redes,
+                            gerenciamento de usuários e aplicação de
+                            políticas de segurança.
+                        </p>
+
+                        <p>
+                            Tenho forte experiência técnica em hardware,
+                            incluindo montagem e desmontagem de computadores,
+                            diagnóstico de falhas, substituição de componentes,
+                            formatação, restauração e otimização de sistemas.
+                        </p>
+
+                        <p>
+                            Atualmente direciono minha carreira para
+                            Segurança Ofensiva (Offensive Security), com foco
+                            em análise de vulnerabilidades, infraestrutura
+                            segura e testes de intrusão (pentest).
+                        </p>
+
+                    </div>
+
+
+                    <div class="about-info">
+
+                        <p>
+                            <strong>Localização:</strong>
+                            São José dos Campos - SP
+                        </p>
+
+                        <p>
+                            <strong>Área:</strong>
+                            Tecnologia da Informação
+                        </p>
+
+                        <p>
+                            <strong>Especialização:</strong>
+                            Segurança da Informação
+                        </p>
+
+                        <p>
+                            <strong>Foco:</strong>
+                            Offensive Security
+                        </p>
+
+                        <p>
+                            <strong>Formação:</strong>
+                            Tecnólogo em Cibersegurança
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             COMPETÊNCIAS
+        ====================================================== -->
+
+        <section id="competencias">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <small>
+                        02 / Skills
+                    </small>
+
+                    <h2>
+                        Competências técnicas
+                    </h2>
+
+                </div>
+
+
+                <div class="skills">
+
+
+                    <div class="skill-card">
+
+                        <h3>
+                            Sistemas & Servidores
+                        </h3>
+
+                        <p>
+                            Windows Server, Linux, PowerShell, Active Directory,
+                            gerenciamento remoto via SSH, ERP Sankhya, SAP e
+                            Batch Script (CMD).
+                        </p>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <h3>
+                            Redes
+                        </h3>
+
+                        <p>
+                            CLI, TCP/IP, IP, DNS, DHCP, gateway, configuração
+                            e diagnóstico de redes.
+                        </p>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <h3>
+                            Segurança & Operações
+                        </h3>
+
+                        <p>
+                            Análise de vulnerabilidades, Nmap, Nessus,
+                            Trend Micro, Microsoft Defender e gerenciamento
+                            de incidentes. Atendimento e acompanhamento de
+                            chamados relacionados à segurança através do GLPI.
+                        </p>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <h3>
+                            Segurança Ofensiva
+                        </h3>
+
+                        <p>
+                            Conceitos de Pentest, Ethical Hacking,
+                            reconhecimento, análise de serviços,
+                            identificação de vulnerabilidades e elaboração
+                            de relatórios técnicos.
+                        </p>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <h3>
+                            Hardware & Suporte
+                        </h3>
+
+                        <p>
+                            Montagem e desmontagem de computadores,
+                            diagnóstico e substituição de componentes,
+                            instalação de sistemas, formatação, backup,
+                            restauração e recuperação de dados.
+                        </p>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <h3>
+                            Automação
+                        </h3>
+
+                        <p>
+                            PowerShell para automação e administração de
+                            ambientes Windows/Active Directory, além de
+                            Batch Script (CMD) para automatização de tarefas.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             EXPERIÊNCIA
+        ====================================================== -->
+
+        <section id="experiencia">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <small>
+                        03 / Experiência
+                    </small>
+
+                    <h2>
+                        Experiência profissional
+                    </h2>
+
+                </div>
+
+
+                <div class="timeline">
+
+
+                    <!-- CEBRACE -->
+
+                    <article class="experience">
+
+                        <h3>
+                            Estagiário em Segurança da Informação
+                        </h3>
+
+                        <div class="company">
+                            Cebrace
+                        </div>
+
+                        <div class="date">
+                            jul. 2026 – atual
+                        </div>
+
+                        <ul>
+
+                            <li>
+                                Atuação no time de Cybersecurity dentro da
+                                estrutura de Tecnologia da Informação.
+                            </li>
+
+                            <li>
+                                Atuação em ambiente corporativo de Segurança
+                                da Informação.
+                            </li>
+
+                            <li>
+                                Participação em atividades relacionadas a
+                                operações e segurança cibernética.
+                            </li>
+
+                        </ul>
+
+                    </article>
+
+
+                    <!-- ANHANGUERA -->
+
+                    <article class="experience">
+
+                        <h3>
+                            Técnico de Informática Jr.
+                        </h3>
+
+                        <div class="company">
+                            Anhanguera São José dos Campos
+                        </div>
+
+                        <div class="date">
+                            fev. 2025 – atual
+                        </div>
+
+                        <ul>
+
+                            <li>
+                                Atuação em ambiente acadêmico de laboratório
+                                de informática.
+                            </li>
+
+                            <li>
+                                Suporte a usuários.
+                            </li>
+
+                            <li>
+                                Manutenção de equipamentos.
+                            </li>
+
+                            <li>
+                                Instalação de sistemas e softwares.
+                            </li>
+
+                        </ul>
+
+                    </article>
+
+
+                    <!-- CIRÚRGICA -->
+
+                    <article class="experience">
+
+                        <h3>
+                            Auxiliar de TI
+                        </h3>
+
+                        <div class="company">
+                            Cirúrgica São José
+                        </div>
+
+                        <div class="date">
+                            out. 2025 – dez. 2025
+                        </div>
+
+                        <ul>
+
+                            <li>
+                                Administração de servidor Windows com Active
+                                Directory, DNS, DHCP e GPO.
+                            </li>
+
+                            <li>
+                                Gerenciamento de usuários, grupos e políticas
+                                de acesso.
+                            </li>
+
+                            <li>
+                                Suporte ao ERP Sankhya, incluindo usuários,
+                                módulos, permissões e rotinas.
+                            </li>
+
+                            <li>
+                                Manutenção de hardware, substituição de
+                                componentes e diagnóstico de falhas.
+                            </li>
+
+                            <li>
+                                Instalação e configuração de sistemas
+                                operacionais e softwares.
+                            </li>
+
+                            <li>
+                                Formatação, backup, restauração de sistemas
+                                e atendimento técnico.
+                            </li>
+
+                        </ul>
+
+                    </article>
+
+
+                    <!-- THERMAS -->
+
+                    <article class="experience">
+
+                        <h3>
+                            Auxiliar de Infraestrutura de TI
+                        </h3>
+
+                        <div class="company">
+                            Assoc. Cultural Recreativa e Esportiva (Thermas)
+                        </div>
+
+                        <div class="date">
+                            jun. 2025 – set. 2025
+                        </div>
+
+                        <ul>
+
+                            <li>
+                                Atuação em ambiente de Data Center.
+                            </li>
+
+                            <li>
+                                Alojamento e monitoramento de servidores.
+                            </li>
+
+                            <li>
+                                Execução de rotinas de processamento via ERP.
+                            </li>
+
+                            <li>
+                                Armazenamento e backup de dados.
+                            </li>
+
+                            <li>
+                                Instalação de softwares e sistemas operacionais.
+                            </li>
+
+                        </ul>
+
+                    </article>
+
+
+                    <!-- GWORI -->
+
+                    <article class="experience">
+
+                        <h3>
+                            Técnico de Informática / Geral
+                        </h3>
+
+                        <div class="company">
+                            GWORI Tech — Autônomo
+                        </div>
+
+                        <div class="date">
+                            out. 2023 – atual
+                        </div>
+
+                        <ul>
+
+                            <li>
+                                Instalação e configuração de equipamentos,
+                                softwares, hardware e sistemas operacionais.
+                            </li>
+
+                            <li>
+                                Suporte técnico ao usuário e resolução
+                                de incidentes.
+                            </li>
+
+                            <li>
+                                Substituição e configuração de periféricos.
+                            </li>
+
+                            <li>
+                                Formatação, backup, restauração de sistemas
+                                e recuperação de dados.
+                            </li>
+
+                        </ul>
+
+                    </article>
+
+
+                    <!-- 3C -->
+
+                    <article class="experience">
+
+                        <h3>
+                            Almoxarife
+                        </h3>
+
+                        <div class="company">
+                            3C Services S.A / Amara NZero
+                        </div>
+
+                        <div class="date">
+                            out. 2024 – mai. 2025
+                        </div>
+
+                        <ul>
+
+                            <li>
+                                Controle e organização de estoque.
+                            </li>
+
+                            <li>
+                                Recebimento, conferência e expedição
+                                de materiais.
+                            </li>
+
+                        </ul>
+
+                    </article>
+
+
+                    <!-- TRANSLOGMED -->
+
+                    <article class="experience">
+
+                        <h3>
+                            Assistente Logístico
+                        </h3>
+
+                        <div class="company">
+                            Translogmed Soluções Logística
+                        </div>
+
+                        <div class="date">
+                            fev. 2019 – out. 2023
+                        </div>
+
+                        <ul>
+
+                            <li>
+                                Coordenação e controle de processos
+                                logísticos.
+                            </li>
+
+                            <li>
+                                Gestão documental.
+                            </li>
+
+                            <li>
+                                Atendimento a clientes internos.
+                            </li>
+
+                        </ul>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             PROJETOS
+        ====================================================== -->
+
+        <section id="projetos">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <small>
+                        04 / Projetos
+                    </small>
+
+                    <h2>
+                        Projetos pessoais
+                    </h2>
+
+                    <p>
+                        Projetos práticos relacionados à identificação,
+                        análise e tratamento de vulnerabilidades.
+                    </p>
+
+                </div>
+
+
+                <div class="projects">
+
+
+                    <!-- PROJETO 1 -->
+
+                    <article class="project-card">
+
+                        <h3>
+                            Vulnerabilidade de Segurança
+                        </h3>
+
+                        <p>
+                            Identificação e análise de vulnerabilidades
+                            relacionadas à exposição de serviços e falhas
+                            de configuração, com elaboração de relatório
+                            técnico contendo riscos e recomendações
+                            de mitigação.
+                        </p>
+
+                        <a
+                            href="relatorios/vulnerabilidade-seguranca.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="button"
+                            aria-label="Ver relatório do projeto Vulnerabilidade de Segurança"
+                        >
+                            Ver relatório
+                        </a>
+
+                    </article>
+
+
+                    <!-- PROJETO 2 -->
+
+                    <article class="project-card">
+
+                        <h3>
+                            Exposição em URL
+                        </h3>
+
+                        <p>
+                            Descoberta de vulnerabilidade crítica relacionada
+                            à exposição de dados sensíveis via URL.
+                            Desenvolvimento de script em Python para análise
+                            dos usuários afetados e reporte ao responsável,
+                            resultando na correção pela empresa.
+                        </p>
+
+                        <a
+                            href="relatorios/exposicao-url.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="button"
+                            aria-label="Ver relatório do projeto Exposição em URL"
+                        >
+                            Ver relatório
+                        </a>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             FORMAÇÃO
+        ====================================================== -->
+
+        <section id="formacao">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <small>
+                        05 / Formação
+                    </small>
+
+                    <h2>
+                        Formação acadêmica
+                    </h2>
+
+                </div>
+
+
+                <div class="education-card">
+
+                    <h3>
+                        Tecnólogo em Cibersegurança
+                    </h3>
+
+                    <p>
+                        Anhanguera
+                    </p>
+
+                    <p>
+                        2026 – 2028 (previsão de conclusão)
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CURSOS
+        ====================================================== -->
+
+        <section id="cursos">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <small>
+                        06 / Formação complementar
+                    </small>
+
+                    <h2>
+                        Cursos e treinamentos
+                    </h2>
+
+                </div>
+
+
+                <div class="courses">
+
+
+                    <div class="course-group">
+
+                        <h3>
+                            Cisco Networking Academy
+                        </h3>
+
+                        <ul>
+
+                            <li>
+                                Networking Basics — 20h
+                            </li>
+
+                            <li>
+                                Introduction to Cybersecurity — 6h
+                            </li>
+
+                            <li>
+                                Ethical Hacking — 70h
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <div class="course-group">
+
+                        <h3>
+                            Cursos complementares
+                        </h3>
+
+                        <ul>
+
+                            <li>
+                                Cibersegurança — Introdução a Pentest
+                                — Bruno Fraga — 100h
+                            </li>
+
+                            <li>
+                                Batch Script CMD — Automatização de Tarefas
+                                — Cursa — 15h
+                            </li>
+
+                            <li>
+                                Automate Active Directory with PowerShell
+                                (Hands-On) — Udemy — 4h
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CERTIFICAÇÕES
+        ====================================================== -->
+
+        <section id="certificacoes">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <small>
+                        07 / Em preparação
+                    </small>
+
+                    <h2>
+                        Certificações e objetivos
+                    </h2>
+
+                </div>
+
+
+                <div class="certifications">
+
+                    <span class="tag">
+                        LPI Essentials
+                    </span>
+
+                    <span class="tag">
+                        CCST
+                    </span>
+
+                    <span class="tag">
+                        CCNA
+                    </span>
+
+                    <span class="tag">
+                        CompTIA Security+
+                    </span>
+
+                    <span class="tag">
+                        eJPT
+                    </span>
+
+                    <span class="tag">
+                        AWS
+                    </span>
+
+                    <span class="tag">
+                        Azure
+                    </span>
+
+                    <span class="tag">
+                        IELTS
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             IDIOMAS
+        ====================================================== -->
+
+        <section id="idiomas">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <small>
+                        08 / Idiomas
+                    </small>
+
+                    <h2>
+                        Idiomas
+                    </h2>
+
+                </div>
+
+
+                <div class="languages">
+
+                    <div class="language">
+
+                        <strong>
+                            Português
+                        </strong>
+
+                        <br>
+
+                        Nativo
+
+                    </div>
+
+
+                    <div class="language">
+
+                        <strong>
+                            Inglês
+                        </strong>
+
+                        <br>
+
+                        Técnico — leitura e escrita
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CONTATO
+        ====================================================== -->
+
+        <section id="contato">
+
+            <div class="container">
+
+                <div class="contact">
+
+                    <div class="section-title">
+
+                        <small>
+                            09 / Contato
+                        </small>
+
+                        <h2>
+                            Vamos conversar
+                        </h2>
+
+                        <p>
+                            Entre em contato através dos meus canais
+                            profissionais.
+                        </p>
+
+                    </div>
+
+
+                    <div class="contact-links">
+
+
+                        <a
+                            href="mailto:lucasrenz@proton.me"
+                            class="button"
+                        >
+                            E-mail
+                        </a>
+
+
+                        <a
+                            href="https://www.linkedin.com/in/lucasgwori/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="button"
+                        >
+                            LinkedIn
+                        </a>
+
+
+                        <a
+                            href="https://github.com/lucasgwori"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="button"
+                        >
+                            GitHub
+                        </a>
+
+
+                        <a
+                            href="https://tryhackme.com/p/lucasgwori"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="button"
+                        >
+                            TryHackMe
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+
+    <footer>
+
+        <div class="container">
+
+            <p>
+                © 2026 Lucas Rezende. Todos os direitos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
+```
