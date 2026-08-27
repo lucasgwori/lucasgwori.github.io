@@ -461,11 +461,11 @@
 
         /* Botão do relatório fica sempre no final do card */
 
-        .project-card .button {
-            margin-top: auto;
-            align-self: flex-start;
+        .projects-button {
+            display: flex;
+            justify-content: left;
+            margin-top: 30px;
         }
-
 
         /* =========================================================
            FORMAÇÃO
@@ -718,7 +718,111 @@
             }
         }
 
+        /* =========================================================
+            AUTOR TÉCNICO
+        ========================================================= */
+
+        .author-card {
+            margin-top: 50px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-left: 3px solid var(--green);
+            border-radius: 8px;
+            padding: 35px;
+        }
+
+        .author-card h3 {
+            color: var(--green);
+            margin-bottom: 15px;
+        }
+
+        .author-card p {
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+
+        .author-card .book-title {
+            color: var(--text);
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .author-card .book-subtitle {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        
+        /* =========================================================
+           DESTAQUES - PADRÃO DOS CARDS
+        ========================================================= */
+
+        .highlight-card,
+        .author-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-left: 3px solid var(--green);
+            border-radius: 8px;
+            padding: 35px;
+        }
+
+        .author-card {
+            margin-top: 50px;
+        }
+
+        /* TÍTULO PRINCIPAL DO DESTAQUE - VERDE */
+
+        .highlight-title {
+            color: var(--green);
+            margin-bottom: 15px;
+        }
+
+        /* TÍTULOS INTERNOS - BRANCO */
+
+        .highlight-card h3:not(.highlight-title) {
+            color: var(--text);
+        }
+
+        /* TEXTOS - CINZA */
+
+        .highlight-card p {
+            color: var(--text-secondary);
+        }
+
+        /* ESTATÍSTICAS */
+
+        .highlight-card .highlight-stat strong {
+            color: var(--text);
+            font-weight: bold;
+        }
+
+        .highlight-card .highlight-stat span {
+            color: var(--text-secondary);
+        }
+
+        /* DESCRIÇÃO */
+
+        .highlight-description h3 {
+            color: var(--text);
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .highlight-description p {
+            color: var(--text-secondary);
+        }
+
+        .courses-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
     </style>
+
+
 </head>
 
 
@@ -767,7 +871,11 @@
                     <li>
                         <a href="#cursos">Cursos</a>
                     </li>
-
+                    
+                    <li>
+                        <a href="#destaque">Destaques</a>
+                    </li>
+                    
                     <li>
                         <a href="#contato">Contato</a>
                     </li>
@@ -810,18 +918,23 @@
                     </h1>
 
                     <h2>
-                        TI | Infraestrutura, Cybersecurity & IA
+                        TI | Cybersecurity, Infraestrutura & IA
                     </h2>
 
                     <p>
-                        Profissional de TI com experiência prática em suporte,
-                        infraestrutura, redes, administração de sistemas e
-                        segurança. Atualmente direcionando minha carreira para
-                        Segurança da Informação, com foco em Segurança Ofensiva,
-                        análise de vulnerabilidades e testes de intrusão.
-                        Paralelamente, venho aprofundando meus estudos em
-                        Inteligência Artificial, com interesse em LLMs, IA local,
-                        automação e sistemas inteligentes.
+                        Possuo experiência prática em Tecnologia da Informação,
+                        com atuação em infraestrutura, redes, administração de usuários e suporte técnico,
+                        além de experiência com hardware e sistemas operacionais.
+                        Atuo na área de Segurança da Informação (Cybersecurity),
+                        participando de atividades relacionadas à proteção e monitoramento do ambiente corporativo.
+                        Minha atuação envolve análise de vulnerabilidades,
+                        tratamento e resolução de incidentes de segurança, análise de relatórios,
+                        elaboração de relatórios técnicos, acompanhamento de eventos de segurança e
+                        automação e processamento de dados utilizando PowerShell.
+                        Tenho interesse em aprofundar meus conhecimentos em Segurança Ofensiva (Offensive Security),
+                        especialmente em Ethical Hacking, testes de intrusão (Pentest) e técnicas de
+                        exploração e avaliação de segurança, buscando ampliar continuamente minha
+                        experiência e conhecimento em Cybersecurity.
                     </p>
 
                 </div>
@@ -1113,7 +1226,7 @@
                         </div>
 
                         <div class="date">
-                            fev. 2025 – atual
+                            fev. 2026 – jun. 2026
                         </div>
 
                         <ul>
@@ -1381,7 +1494,6 @@
 
                 <div class="projects">
 
-
                     <!-- PROJETO 1 -->
 
                     <article class="project-card">
@@ -1397,16 +1509,6 @@
                             técnico contendo riscos e recomendações
                             de mitigação.
                         </p>
-
-                        <a
-                            href="relatorios/vulnerabilidade-seguranca.pdf"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="button"
-                            aria-label="Ver relatório do projeto Vulnerabilidade de Segurança"
-                        >
-                            Ver relatório
-                        </a>
 
                     </article>
 
@@ -1427,18 +1529,23 @@
                             resultando na correção pela empresa.
                         </p>
 
-                        <a
-                            href="relatorios/exposicao-url.pdf"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="button"
-                            aria-label="Ver relatório do projeto Exposição em URL"
-                        >
-                            Ver relatório
-                        </a>
-
                     </article>
 
+                </div>
+
+
+                <!-- LINK PARA OS PROJETOS NO LINKEDIN -->
+
+                <div class="projects-button">
+
+                    <a
+                        href="https://www.linkedin.com/in/lucasgwori/details/projects/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="button"
+                    >
+                        Ver projetos no LinkedIn
+                    </a>
 
                 </div>
 
@@ -1530,7 +1637,11 @@
                             </li>
 
                             <li>
-                                Ethical Hacking — 70h
+                                <strong>Ethical Hacking — 70h</strong><br>
+
+                                13ª Maratona de CiberEducação Cisco Brasil —
+                                seleção entre mais de 70 mil inscritos, com formação
+                                realizada pela Escola de Comunicações do Exército Brasileiro (EsCom).
                             </li>
 
                         </ul>
@@ -1547,24 +1658,216 @@
                         <ul>
 
                             <li>
-                                Cibersegurança — Introdução a Pentest
+                                Cibersegurança Introdução a Pentest
                                 — Bruno Fraga — 100h
                             </li>
 
                             <li>
-                                Batch Script CMD — Automatização de Tarefas
+                                Batch Script CMD Automatização de Tarefas
                                 — Cursa — 15h
                             </li>
 
                             <li>
                                 Automate Active Directory with PowerShell
-                                (Hands-On) — Udemy — 4h
+                                — Udemy — 4h
                             </li>
 
                         </ul>
 
                     </div>
 
+
+                </div>
+
+
+                <div class="courses-buttons">
+
+                    <a
+                        href="https://www.linkedin.com/in/lucasgwori/details/certifications/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="button"
+                    >
+                        Ver certificados no LinkedIn
+                    </a>
+
+                    <a
+                        href="https://credly.com/users/lucasgwori/badges/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="button"
+                    >
+                        Credly — Badges & Skills
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =====================================================
+            DESTAQUES
+        ====================================================== -->
+
+        <section id="destaque">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <small>
+                        07 / Destaques
+                    </small>
+
+                    <h2>
+                        Destaques
+                    </h2>
+
+                    <p>
+                        Formação, conquistas e produção técnica.
+                    </p>
+
+                </div>
+
+
+                <!-- =================================================
+                    MARATONA CISCO
+                ================================================== -->
+
+                <div class="highlight-card">
+
+                    <h3 class="highlight-title">
+                        13ª Maratona de CiberEducação Cisco Brasil
+                    </h3>
+
+                    <p>
+                        Participação em programa de formação em
+                        cibersegurança com processo seletivo,
+                        atividades práticas, prazos e avaliação.
+                    </p>
+
+
+                    <div class="highlight-stats">
+
+                        <div class="highlight-stat">
+
+                            <strong>
+                                +70 mil
+                            </strong>
+
+                            <span>
+                                inscritos
+                            </span>
+
+                        </div>
+
+
+                        <div class="highlight-stat">
+
+                            <strong>
+                                5 mil
+                            </strong>
+
+                            <span>
+                                selecionados
+                            </span>
+
+                        </div>
+
+
+                        <div class="highlight-stat">
+
+                            <strong>
+                                70h
+                            </strong>
+
+                            <span>
+                                Ethical Hacking
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <br>
+
+
+                    <div class="highlight-description">
+
+                        <h3>
+                            Formação em Ethical Hacking
+                        </h3>
+
+                        <p>
+                            Selecionado para participar da 13ª Maratona
+                            de CiberEducação Cisco Brasil, com formação
+                            em Ethical Hacking realizada pela Escola de
+                            Comunicações do Exército Brasileiro (EsCom).
+                        </p>
+
+                        <p>
+                            O programa envolveu atividades dentro de
+                            prazos definidos e avaliação para conclusão
+                            da formação.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                    AUTOR TÉCNICO
+                ================================================== -->
+
+                <div class="author-card">
+
+                    <h3>
+                        Autor técnico
+                    </h3>
+
+
+                    <div class="book-title">
+                        Desvendando o CMD
+                    </div>
+
+
+                    <div class="book-subtitle">
+                        Domine o Prompt de Comando do Zero
+                    </div>
+
+
+                    <p>
+                        Livro técnico desenvolvido para ensinar,
+                        de forma prática, como utilizar o CMD para
+                        controlar arquivos, compreender o funcionamento
+                        do sistema e automatizar tarefas no Windows.
+                    </p>
+
+
+                    <p>
+                        Uma abordagem direta para quem quer deixar
+                        de apenas usar o computador e começar a
+                        entendê-lo e controlá-lo.
+                    </p>
+
+
+                    <p>
+                        <em>
+                            "Pare de só usar o computador.
+                            Comece a comandar."
+                        </em>
+                    </p>
+
+
+                    <a
+                        href="https://pay.kiwify.com.br/FNglUkT"
+                        class="button"
+                    >
+                        Conhecer o livro
+                    </a>
 
                 </div>
 
@@ -1707,12 +2010,12 @@
                         </small>
 
                         <h2>
-                            Vamos conversar
+                            Redes
                         </h2>
 
                         <p>
-                            Entre em contato através dos meus canais
-                            profissionais.
+                            Entre em contato através dos canais
+                            abaixo.
                         </p>
 
                     </div>
@@ -1756,6 +2059,16 @@
                             class="button"
                         >
                             TryHackMe
+                        </a>
+
+
+                         <a
+                            href="https://instagram.com/lucasgwori"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="button"
+                        >
+                            Instagram
                         </a>
 
 
